@@ -1,0 +1,15 @@
+name: Shell commands
+
+on: [push]
+
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo of single-line string
+        run: echo "This is 1st executed command"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
+        
